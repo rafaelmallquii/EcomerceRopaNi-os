@@ -20,6 +20,7 @@ class ProductFactory extends Factory
 
             'category_id' => \App\Models\Category::factory(),
             'name' => $this->faker->name,
+            'description' => $this->faker->sentence,
             'slug' => $this->faker->slug,
             'price' => $this->faker->numberBetween(-10000, 10000)
         ];
@@ -32,13 +33,13 @@ class ProductFactory extends Factory
             // faker api product image
             $product->images()->createMany([
                 [
-                    'url' => 'https://picsum.photos/seed/picsum/200/300',
+                    'url' => $this->faker->imageUrl(640, 480, 'animals', true)
                 ],
                 [
-                    'url' => 'https://picsum.photos/seed/picsum/200/300',
+                    'url' => $this->faker->imageUrl(640, 480, 'animals', true)
                 ],
                 [
-                    'url' => 'https://picsum.photos/seed/picsum/200/300',
+                    'url' => $this->faker->imageUrl(640, 480, 'animals', true)
                 ],
             ]);
         });

@@ -49,7 +49,7 @@ class ProductController extends Controller
             // product with polymorphic relationship
             // get array url from images pluck url
             'product' => $product->with('images')->first(),
-            'favorites' => Product::with('images')->get()->random(5),
+            'favorites' => Product::with('images')->get(),
 
         ]);
     }
