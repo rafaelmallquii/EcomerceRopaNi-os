@@ -42,6 +42,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+        
         // show by slyg
 
         return inertia('Products/Show', [

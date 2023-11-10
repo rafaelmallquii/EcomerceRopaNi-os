@@ -3,8 +3,6 @@ import { Link } from "@inertiajs/react";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import React, { useState, useEffect } from "react";
 
-
-
 export default function ProductCard({ product }:{product:Product}) {
     const [carrito, setCarrito] = useLocalStorage<Product[]>("carrito", []);
 
@@ -28,7 +26,7 @@ export default function ProductCard({ product }:{product:Product}) {
             {
                 
                 product.images.length >= 0 ? (
-                    <Link href={ route("products.show",product.id)} >
+                    <Link href={ route("products.show", product.slug) }>
                     <img
                     src={product.images[0].url}
                     alt={product.name}

@@ -31,7 +31,7 @@ export default function ProductCardAgregado({ product }: ProductCardAgregadoProp
   return (
     <div className="border-2 border-gray-200 p-4 rounded-lg flex shadow-lg w-[300px] hover:shadow-xl transition-shadow duration-300">
       <div className="mr-4">
-        <img src={product.images[0].url} alt={product.name} className="w-20 h-20 object-cover rounded" /> //-------revisar aca
+        <img src={product.images[0].url} alt={product.name} className="w-40 h-20 object-cover rounded" /> 
       </div>
       <div className="w-full">
         <div className="flex justify-between items-start">

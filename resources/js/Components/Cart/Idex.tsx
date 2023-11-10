@@ -14,6 +14,5 @@ export default function Cart() {
         ))}
     <CartSummary carrito={carrito} />
     </>
-    
   );
 }

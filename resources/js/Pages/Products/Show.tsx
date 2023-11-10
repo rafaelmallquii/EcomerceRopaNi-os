@@ -1,5 +1,6 @@
 import React from "react";
 import { Product } from "./types/show";
+import EcommerceLayout from "@/Layouts/EcommerceLayout";
 
 export default function Show({
     product,
@@ -14,6 +15,7 @@ export default function Show({
         product.images[0].url
     );
     return (
+        <EcommerceLayout>
         <div className="container mx-auto pb-32">
             <div className="grid lg:grid-cols-2">
                 <img src={currentImage} alt="" />
@@ -91,5 +93,6 @@ export default function Show({
                 </div>
             </div>
         </div>
+        </EcommerceLayout>
     );
 }

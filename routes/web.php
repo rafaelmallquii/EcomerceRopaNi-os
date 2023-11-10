@@ -15,13 +15,13 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource("products", ProductController::class)->names("products");
 
 Route::get('/', function () {
     return Inertia::render('Home', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+        'products' => \App\Models\Product::with(['category','images'])->get(),
+        'categories' => \App\Models\Category::all(),
+                
     ]);
 })-> name('Home');
 

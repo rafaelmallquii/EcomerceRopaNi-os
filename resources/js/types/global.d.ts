@@ -1,5 +1,6 @@
 import { AxiosInstance } from 'axios';
 import ziggyRoute, { Config as ZiggyConfig } from 'ziggy-js';
+import Home from '../Pages/Home';
 
 declare global {
     interface Window {
@@ -20,7 +21,20 @@ export interface Product {
     created_at: string;
     updated_at: string;
     images: Image[];
+    category: CategoryProps;
+   
 }
 export interface Image {
     url: string;
+}
+
+interface HomeProps {
+    products: Product[];
+}
+
+interface CategoryProps {
+    id: number;
+    name: string;
+    created_at: string;
+    updated_at: string;
 }

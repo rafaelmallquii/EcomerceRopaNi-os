@@ -18,7 +18,9 @@ class ProductFactory extends Factory
     {
         return [
 
-            'category_id' => \App\Models\Category::factory(),
+            'category_id' => function() {
+                return \App\Models\Category::all()->random();
+            },
             'name' => $this->faker->name,
             'description' => $this->faker->sentence,
             'slug' => $this->faker->slug,

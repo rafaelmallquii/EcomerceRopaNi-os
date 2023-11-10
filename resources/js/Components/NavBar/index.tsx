@@ -20,6 +20,7 @@ interface SubMenuItem {
 const menu:MenuItem[] = [
     {
         name: "Inicio",
+        
         subMenu: [
             {
                 name: "Submenu 1",
